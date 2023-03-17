@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+<style>
+    /* CSS Reset */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /*  Navigation Bar: List Styling */
+    #navbar {
+        display: flex;
+        position: relative;
+        align-items: center;
+        top: 0px;
+        background:rgb(46, 47, 66);
+    }
+
+    #navbar ::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.7;
+    }
+
+    #navbar ul {
+        display: flex;
+        font-family: 'Baloo Bhai', cursive;
+    }
+
+    #navbar ul li {
+        list-style: none;
+        font-size: 1.3rem;
+    }
+
+    #navbar ul li a {
+        color: white;
+        display: block;
+        padding: 5px 22px;
+        border-radius: 20px;
+        text-decoration: none;
+
+    }
+
+    #navbar ul li a:hover {
+        color: black;
+        background-color: white;
+    }
+
+    /* Home Section */
+    #home {
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        height: 443px;
+        justify-content: center;
+        align-items: center;
+        background-color:rgb(246, 198, 6);
+    }
+
+    #home::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 70%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.6;
+    }
+
+    #home h1 {
+        color: black;
+        text-align: center;
+        font-family: 'Bree Serif', serif;
+    }
+
+    #home p {
+        color: black;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: 'Bree Serif', serif;
+    }
+
+    /* Services Section */
+    #services {
+        margin: 50px;
+        display: flex;
+    }
+
+    #services .box {
+        border: 2px solid brown;
+        padding: 34px;
+        margin: 25px 25px;
+        border-radius: 23px;
+        background-color: #f2f2f2;
+    }
+
+    #services .box img {
+        height: auto;
+        margin: auto;
+        display: block;
+    }
+
+    #services .box p {
+        font-family: 'Bree Serif', serif;
+
+    }
+
+    /* Clients Section */
+    #client-section {
+        flex-direction: column;
+        position: relative;
+        height: 400px;
+        display: flex;
+        padding: 50px 200px;
+        justify-content: center;
+        background:rgb(46, 47, 66);
+        align-items: center;
+    }
+
+    #client-section::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.4;
+    }
+
+    #clients {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .client-item {
+        padding: 20px;
+    }
+
+    #clients img {
+        height: 225px;
+    }
+
+
+    /* Contact Section */
+    #contact {
+        position: relative;
+        height: 443px;
+        background-color: rgb(245, 151, 32);
+    }
+
+    #contact::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+    }
+
+    #contact-box {
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+    }
+
+    #contact-box form {
+        width: 40%;
+
+    }
+
+    #contact-box label {
+        font-size: 1.3rem;
+        font-family: 'Bree Serif', serif;
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        padding: 9px 20px;
+    }
+
+    .contactbtn {
+        padding: 6px 20px;
+        border: 2x solid white;
+        background-color: rgb(255, 217, 87);
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+        align-items: center;
+
+    }
+
+    /* Utility Classes */
+    .h-primary {
+        font-family: 'Bree Serif', serif;
+        font-size: 2.8rem;
+        padding: 12px;
+    }
+
+    .h-secondary {
+        font-family: 'Bree Serif', serif;
+        font-size: 2.3rem;
+        padding: 12px;
+    }
+    .h-third {
+        font-family: 'Bree Serif', serif;
+        font-size: 2.8rem;
+        padding: 12px;
+        color: white;
+    }
+
+    .btn {
+        padding: 6px 20px;
+        border: 2x solid white;
+        background-color: rgb(255, 217, 87);
+        color: white;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    .center {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="Services.html" target="_blank">Service</a></li>
+            <li class="item"><a href="Chamunda Enterprise- Company Profile.docx">About Us</a></li>
+            <li class="item"><a href="contactus.html" target="_blank">Contact us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to Chamunda Enterprise</h1>
+        <p>From concept to completion, the most important thing you need from your  contractor is the confidence they’ll get the job done and done right. Since 2000, Chamunda Enterprise has been getting the job done for our customers. With hundreds of engineeres, you can rely on the Chamunda Enterprise team to design, engineer, build and integrate complex power and control systems to make your operation run faster and more efficiently.
+
+            Our systematic approach to every project incorporates today’s best practices in engineering and project management. This results in a smoother process for you when it comes to planning, coordinating and managing construction projects.</p>
+    </section>
+    <hr>
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img width="300" height="140"
+                    src="https://149355584.v2.pressablecdn.com/wp-content/uploads/2014/09/construction-icon.png" alt=""
+                    loading="lazy">
+
+
+                <h2>Construction</h2>
+
+
+                <p>The term ‘renovation’ refers to the process of returning something to a good state of repair. In the construction industry, renovation refers to the process of improving or modernising an old, damaged or defective building. This is as opposed to 'retrofitting' which is providing something with a component or feature not originally fitted, or 'refurbishment' which is a process of improvement by cleaning, decorating, or re-equipping</p>
+            </div>
+            <div class="box">
+                <img width="300" height="140"
+                    src="https://149355584.v2.pressablecdn.com/wp-content/uploads/2014/09/roofing-icon.png" alt=""
+                    loading="lazy">
+
+                <h2>Roofing</h2>
+
+
+                <p>A roof is the top covering of a building, including all materials and constructions necessary to support it on the walls of the building or on uprights, providing protection against rain, snow, sunlight, extremes of temperature, and wind.[1] A roof is part of the building envelope.
+
+                    The characteristics of a roof are dependent upon the purpose of the building that it covers, the available roofing materials and the local traditions of construction and wider concepts of architectural design and practice and may also be governed by local or national legislation.</p>
+            </div>
+            <div class="box">
+                <img width="300" height="140"
+                    src="https://149355584.v2.pressablecdn.com/wp-content/uploads/2014/09/remodeling-icon.png" alt=""
+                    loading="lazy">
+
+                <h2>Remodeling</h2>
+                <p>Remodeling is defined as altering a structure, whether this alteration is exterior or interior, from the original construction. Some examples of remodeling are, but are not limited to:
+
+                    Completely transforming the structure and/or style of any space, home, or building.
+                    Changing the layout, in part or in whole, of any space, room, or garage area from the original floor plan.</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="client-section">
+        <h1 class="h-third center">Featured Woork</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="https://www.buildingenclosureonline.com/ext/resources/ARWWCA/Project-Profiles-2018/12-13-18-Middlesex2.jpg?1544720013"
+                    alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRgVFRUYGBgaGBoZGhkYGBoYGhwYGBkZGhgaGhocIS4lHB4rIRoaJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHzQsJCs9NjY0NjQ0NDQ0NDQ0NDY0NDQ0NDY0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAMIBAwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAIDBAYBBwj/xABLEAACAQEFAwgHBAcGAwkAAAABAhEAAwQSITEFQVEGIjJhcYGRsRNCcqHB0fAjUrLhBzNigpKzwhQ0c6LD8UNTdBUWJGNko7TS4v/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACsRAAICAgICAAYBBAMAAAAAAAABAhEDIRIxBEETIjJRYXGhQoGR8QUUI//aAAwDAQACEQMRAD8A4RTYqSK5FevZ4DiMinAV0CnAUWCidQVItNUVKoqWzSKOqKHXb9an+Ha/zVooq0Mun65P8K1/mrXNlfzR/Z2YV8kv0FIrsVy1cKpZjAAknqrLrt9wweOa4LRwAtHQZHqQcDmc6c8qjVix4HO6NVFKKpXHatnaDIgHf+c5jvojFVGcZK0yZY5RdNEeGmlamw0oq7IogK00rVgrTStFicSuVppFTlaaVqrIcSApTStTlabFOyXEhK1zDUxWm4adk8SOK6BTsNLDRY0hsUgKfFKKLCjkUq7SoGKkKVdosYhThXBTgKLHQ6lXKVIZWFdArgp4FNmaOAV0CnBaeFpWVRxRUiCkFp6ipbKSHItCLkPtk/wrX+atGkFZ1716N0fU+itAo4sbRY+J7q5c0kpJs7MEW4yS/BByrv5JF3TUwX+C/E1RN0QogzkIc/33+NVrFCWZ3MsxOZ7dfrcKIAc1PZP47SuLJNybZ6GOCikga91dTK5xoVyI7tfCr+zNuWiEKecCY/3GnhFPFRXhRBeBiXMHfI0njURm0y5QTVPo1V12mj5E4TwOn5eXXV6KwVlflPSEHiNPmKLXPaLp0WxLw1H17+uumHktakjln4sXuJpitcIqpddqo+R5rcD9fl11eiuuM4yVpnFPHKLpojK00rUuGmkVpZm0QlaaUqcrTStNMlogK03DU5Wmladi4kOGuRUpWlFOxcSKKUVJFciiw4kcUop8VyKAobFdp0V2KAo4KcBSApwFA6OUq7FKgKKoFPUU0CpFFNmcRyipAtcUVKq1DZrFDQtPApwWugVNl0JBWJ25bYVs2GpR4PCX18KOcp9omzTAh59pkI1C6E9u4dtAr8ow2BYQq2RbMQIBGfZnXF5Ek2l9jv8AGg4pyfsr29rgWTrAAHXFVXc4bMyZwNnv/XWtV7zbY2nduHV86tPYtgszhMYD/NtD5GudKkdXbJbK/MOkJ69D8jVxbZHET3HI/n3UHFTXbpr7Q86lxRSZctbgPVMdRzHjr51XKOh3jrGh+BoxZWRYhUEscgJiTuE5x20205hwupRuDjDPYTkR358Knn6G0gabRrQYQBiU4pBjTLLgc+NWrntm2sjDSw4Nr47/AD665eUFnDKuZyI0EHPu0pLbo4gx2N8DVKbW0S4p6ZprhtyytMpwtwP15SOuikTmMxxrAW9w+4e4/A0Xu19dDzWy+6dD9cc66YeVX1bOafiJ/To05WmkVSuu2EaA/Mb3Hs+WdERBEggjiMxXVHJGXTOGeKUXtERFNIqUrUdowUSTA4mtLoihpWmlar3baNk5IRxI3SNNAewwY7O2rZFEZKXTG4yjpoiiuEVIa5FVZNEcUop+GuRRYUNw0op0UoosKOAV0V2K6BRYUcilTopUhUVwKeq10LT1Wm2SonVFSqKaoqVRUNmkUILTbd1RS7ZBRJ+uNTAVnOUN8xN6NTkplut9w7vMjhWWTJxjZvix8pUZ+93gu7278cKDgBkAPriaJC5G3a62ZaFFmpbL1QyAj3g91B3U2jx6iHPrP17q1OxB9rYf9Kfx2dedJtps9JJaRkEuoNo8jmq7gDjDGB2UZnmp7J/G9QXmAzTAAZidw1JNQf8AaIwpKNhKGCMzGO0ElciNOultoa0yxaXdG1GfEZGoUuOFlYGQCDB1199TWF5R+iwJ4aN4HMVPRtFF7Y4+3s/bFbO+3VXRgyhhrmAYPfWQ2AhN4sh+2PjXqQuCrZsWzOE5cMq5csJSkq9D5JLZ5lt/YtlZmEUhWI5uJiqmD0ROVZy22cfUM9R+degfpDCo1n6objxg1jwQcwZHVmK2hyikmJUwMLR0yMjqbTu/Kipp7qCIIkeNNqm7GlRyp7te3TosR1HMVASJAkSdBOZjWBv1pNSTcdoGk9MLPyiRUZnUyoJgaGBOU/XZWG2zygtbwSCcKfdHDrPw8ZojtPoP7DfhNZQGumOWUltnPLFGL0gkXK+jZSVIRYIyOprRbJ5VskJbCRpiA8wPh4VnLQ81PYXzaoqtOnaJcU1TPVrteUtFDIwYHganw15TdL09m2JHKnq0PaND9aVr9k8rUaFtwEP3x0D2z0e/xreOf0znn4/uJpsNLDTkcMJUgjiK7Fbp2c7jWmR4aWGpcNcw0WTRGFrsU/DSiiwobhpU/DXKLChoWnBaeFpwFKx8RirUiikBThSbGkVNp3z0SFh0jkg/aO/sAz7qxznid+/eSd/WTV7a179K5IPNAwpBIy3tIzBOvYBQq0urs6sebZpzhxdjzQewSdd4PEV5+WXOWukelhhwj+WPYqgJ0EknrJ+vKtJyeH293/6b+uyrH202j4BkqnP59u4Vf2venRLHAxUtYBCRrhOAkA7pwgTwms6tNGrewZtm843dR0Q7fvEMf8o3cdeFMfoWXsH+ba1XsLAuYHedwFG2uSYEGeSETOf6xz2b6rpUJbYHZQdRNT2V4dei5I4Nzh78x41YfZ59Vge3Kq72DLqp7dR4ilaY6DOxNsBLaza0XCA2bLLACDmRE+E16Xdtqi1U4LUOkN0WDDonWNOw14uDT0tCpDKSGGjKSGHYRmKynhUmndBZu+WptLYLjYFhaWkGIGESFAjQRHGsY1laJnBHWuY74+NSWu2bdgFZ8UEkYwCc9ZOTHvM0+z2n99SOtTPuOY7pqlFxST2GhlltFh0gG6xkflRIiqoFlaaYSermt3jI+Iq3SdFoZa2KusOoYTv1GmhGYptldGAnGxXA5wtzjK2oQc7WIYZdVW7GyxKeo1Iywg9i0/8AkJSUvRNbsB7SSUf2G8jQK43ZDqcR4aDw+dasICy5Tzhl3ir7ckLK8MzKPRHCCMO4ktnE5TArny+THCqk2k/ZqsTltGRtVEQQCB9ZHdVIWU9E58D8Doe+KLbX2FebuLQsA6K2FnGo5qsGI4QwoJcLyC655EgeNbYsj48ou0ZTirpqjrAgwRB4GkDWj21ZKEBgHtHxGYrOnDuMdR07m3d/jWuHOsqvozlFxYa5L320W3s0VyEZ4K6iIJy4abq9HivL+TzBbzZFjAD5k7ua1epqARIMjiK78LVNHJmTbTGRSipMNcitbMKGRSinxSiiwobFKnxSosKFhpwWugU4ClZVDMNCeUF7wr6Nek453UnDv07AaNgViL7aFncsZOI+4wAOoACsM83GNL2b4YKUrfoqFxiw74n5eOfhV+8fqU7P6zVi/wByVLvZOog2hxMd5OAanx7KE7TvUJZoOlhJPADE0TxPV1dk8cKOx2D77bhZRNSZYjdO7t8hVzbNiXW7qMvslz4CFoYbEu7RpOZ3D8zWlTZzXh7rZK2HFZLibeEhMWHr0qm0oti7YJs7MKMKj64nrq2w5qeyfxvQ2/3oIWRMyCRPCDHeagtHYLZmSJQ5yc/tbXfSq0O9heu0IS+uN4PaPlVlNoj1l8DPnSpjsttYK2qgn3+7OoLTZw3Eg8CJoxyZwW94s7MwQzQVYZEQZBByOVbHa3JGwCnBisyBICNK/wADgqPAVEp8e0x1Z5a9ycbp7D8DVdlIyIIPA5Vsdt7Ha7sBjDgxBwYToZmGIOm4ChbKDkRI6xNVGdq0KgAyzqJoi17dWYZMMRyPCTU1pcUOgI7D8DVG16TadI9W805SsqKDuzts2SK4ezYscJWGwgfekwer1d26pvTq6nDpgfKQxGK2RgCRlMVmm7OG/PSuqe4++s0knY3EP3Zeentr+IV6BdbNQ7gCOYmna9eW3C9OrpJBGNJncMQnOvT7C1DO7KQQUSCDIOb7xXH5cFNU1apm2L7A/bN2xWd4XUMDPeiCvH9l7LV7exVs1a0RWGkqzgMPA17PfDzbXu/CleZbBs//ABN3y/41n+JaXjx+Filx1/oWX5nsu8r+TBu1iLSxtHazLhPRvzsJIJlTwyiOsa1hHDGcRPZur3P9INmP7JH7aH/Mo+NeQX+yAmq/4/yJZMScu2YZIpPRZuv95Htt5NWsut6dOgxHVqvhWWu1iz3sIkBjaMFxTEw0TGcVols3XJ0wt1NiByBkacd4rvySpqnsUKaaZp9mX70sgrBWJIORmdPCr2Gg3JvV+xfNqPRXbhk5QTZxZoqM2kRRXcNO7M/rjXSvE9w+pNa2ZcRk9Y8RSp3cB/DXKVj4nFNSCoVanq1DEiZRWGvV2EtayZxukTkBkxMcTl4dtblTWF2jfFRGQiW9M7e4ADznhHXXNn6R04PYS5RXpFul1WQXwhgu/DgAxEbhOXXnwMYx2nM79afb2pcksSTAGe5QIUDgAMoqu6PIOGEAmTEtIygbhn7q54x9HS3QYVQBllvPfqa0vJkTebsP/TH+isTebV3bAoyGR643k8K2/JT+83b/AKc/0UTXyMldoxpuXPdnz57Qv7x1+VXmtkwoMQ6B3j77ihe0L0zO6jIYmHWYY6nhSdBgsxiAITeDHTc6qCd/CqrWwXYQa7ofVHdl5VC+z13Ej31TWyYdEj91hPhM+6nm8WidKR7Sx7yKVMq0G+St2ZL5YNiEB9cwei31rXqt4fmt2Hyrybk7fmN5swVGrHKRojH4VvkvLHLCQM94gZEk9elcnkXyRpBabBP6RLxhWyKx0oM9j/KsUm0fvL4H4Gtty4sgos1cq3aABPO0B/3rHPcUOgI7D85rbE1wVkvt0PS+IfWjty99UbXpN7R8zUj7OPqt4j4io7ScTe0fM1Uq9DiEtjbBtLyH9HhlAkgtBOPFEZQeidSKgvuyLWy6aOokiSpIka84Ze+tb+jQS15H7Nj/AKtFeVixdLT229xFcfxpLP8ADrRTWrPM7MZjPePOqOz79aWVlisndDj9QkeoNRoe+ryLzlH7Q8xVW+7CvCWeALjIeTgOeHDGjAE5jcK9DHKKtS9mOWLdNGg2ZyqtmNnZ2gV/SmC3RYEPhByyOSjKBQe43k2bpaCCUZXAbKSpBAPVlVTZmJbe6KylWL5hlKkfaOdDnwqYkQOyoywgtJdjxNu7Zp+UXLNLzdzZtZMjypBDBkMMp1yI04HtrEXq0BHHKn3081uz41RVpFY4sMYKoqkhzezS8m0DbUsVOhtzP8LmtHtvJx7I8l/M99Yy7XprK9rap0ktMY7Vkx2HTvo7etsC1YFxhMRlmIAAGfdV5IvmpeqJgaLkwZZ+xfNq0BA359W7v/Os7ySIZrSCDzV8zwrTBB9fWVd2F/IjmzK5sZmfr4/Id9dCfXz4981JFdrWzOhkUqfSosdGE2ZylLkYyiKEls5JKjopmS5Pjke06W7XxXJCnSJzG/TQ15RyfABZyyoAI58EAGCZB0y0OecSCCa1/Jja1k2JFAxk8RLnMsVhQI1gTn1Zms8UnpSYpRS6RtEavMb0Ge1c7lZ+wAE5dtazaO30QAKxkOoOW4gHKR1x1EGgN5s+k4MKfSc3KJOFsRO851GeSeka4E9gko4POUBSBh3k6GTwEEe+r16/VJ7K1DtH/h55eiX8KV2+2kWdmvFB3Ab47orKLSb/AEdDul+zltelTJQCxzPCTxPw8qLWm17S7egtEAL+hwKWzC4gnOjfGHT/AGOaJEzxortroWH+Gv4RSpNNC9gl3zJ1JJJ7Tqas2vRTTof1vVWKsWvRTP1P63qX0WtMYew1IjkdEsOwkeVQinZ0iyzdr26OHUgMNGKqTpGpE6GjdhytvC9JUfuwnPsNZ0E0sXVUtJ97CjQcpOUf9sVMaejZTORxAxiG+CNeugSoR0XHcSvnApYshr9E03w8qadKkLiTC82g3yOwMPEfOlaqMTe0fM1GFpGhtMcVR6B+i/pXn2bH/Voryt/u1p7b+a15dd+U94uZP9nZQXC48Shsk6MA6dI1Q2ptu+3ufS2jYSZwKcCZ68wdLtM1z/8AXk8vxG1RMpbpILXfN1y9dev1hW6u7SCFRWLmMRnm4SdI7a8k/spUgpKkKolWwnEFGIg+1J76J3HlDfrCMNqSB6rorj+IjF4Gl5Pjyyr5JK69lwy19SZ6Q+ycyxywNiIGQx80z2ZisNslQ1vYjI/aJqJHSXdvq3Y/pEtoYWtgjYiCSjMn3fVbF90bxQfZO2LNbayd8SBXQsSuKArAk82SdOFTjw54YnGffr/A/iQcrRr+Wuw7Fbs9oqKrgrmowjNlB5qwN/CvNXWK9R5W7Zu9tdHFjb2bmUOFWGLpp6p53urzW8JrR4HNYUsl3vvsWbi5NosNZs15KqCzF2ACgknI5ADMmrR4HUag7urqNTbEWdo2f+MfJqO8sxD2fsa/up866Z5f/VQr1f8AJEI/Lf5LHIIfaWnsD8VbasLyGDG0cKCeYJiCOl62+OwVtXs7QCSoyE7ycuCjM114pJRMMsW5MlmuTXDdX3so7AW+VBLnt+6Wtqlkju7OSF+zYLkC0w+fqndNackZcWGvSjgfrvpVL6FB6p/jUe6cqVLn+A4fk+fQABIaSN0Zb931rRTYyrjQmFMiSSYwmTJGfCP3hnpNUXcRzpmM46tePH30heVjIyff4iuZT3rZTRoNqXUZkAhy2IDEWLSJXNolpMAjXEMsiBdtX+zjfDk9UqkT4HwrMLeiTmwZtQSSSOqZB0y3aCtHaNzD7J8qqbT2isSqwderUNgj1UVc+IVQfKqxP1xpE93ZrUNs5DKpXJphiRuBOXhUK2bNpEhP0KMbYsebYYFlii6QPVXMmgwNai3P93P/AJY/CtVF0mTIy8mrFpGFPY/1HqrVm0YYU9j+t6RSGgCp7smJ0XcWUHsJAqvIqe6dNPbT8QqSzUWXJ27YMTX1MX3VsbXXhLH4UDtrlDELzhuIOo4wQI8aHXu0KQM/E7q1HI27l7veXaZUPEnMRZzlWMpSirdEJv0BLxs91zZWUDKSBG/gxy1qsUIAO46ZMJ00kCRnrWj2xdQcc55o3H/mfOhF+HMsh+wR74pY8qmaNNPZTw9VNYHiadFdC9tW2Oipb3Vn0mctOwVxtjW4XENOyt3yM2Wlr6XFJKizIgkdLHu0PR30XvuzAiE42gek5pVI5rhFEhQdDOu6uaeeUXS/ktRi3TPHrW3tjhTEYBMKWOFSelAJgTvjWKRuzevax1KrN74A99a4bJV7dRAYFxKwM53UXt9kXdVZTYshJXolwZhgTKvA0XdnnVPzYKkS8ErMNd7exQQxdwEIEgLzi2IMZxcSIyJ4io7W+2J0XPqn/aj175OIWUIz87cwVvWOpOf0KM7L5MoWwYmTpZqMhhVjJwsDoDxq35OPTttkrFLqjCWd3xSQjgATJSRqBr3z3U17CMlbLqJjwrf7X5JWZRnFsHwgaKwMlgBOKctawu0tlYGVdZXF/mZf6a0x51NdkyxOI647QtLK3S3BV3R8cMMiesKRx3US2xylNuyM1lhKrHNYtOSjQgR0eJ1oZeLqotYjTD+EVOEQax3mfOtJcW1JrdERUukzZcgQHa8LJXHYYZHSXEYnLQia0mxNgJdna0R7R3dAhLsrCAQciAJMgasayPI7aKWRt3lGf0JKIWALupkIu8k8ACa1+x9pXm0tCLawFnZ+iDTDg+kOCUljmBL7t1aw6FN7DbKxGse/3CPjWe2TyOu93dLQPaO6TGMrhzBUyqqJyJo7eXIRiNQrR2wYrz7Yl6v72t0a0N5KzaG1lWRPXCY1EKPViaszZ6RjUbhSrG7R20iWjK2CRGqtMEAic+EUqOSFs8ptDJMEnKc9BviaQOUEkTOveNDnSa8rpE6ZknQTkOEmm2hE6kzHSA90EyNPyrPjSJs44gSDlnxFaNrJ2RWZoEHm+yqkHI9e+su8znnl2DrrYz9mnsn8C0ejSINvFkFdSBBZFJ7cKn4muX7/AIHY3k9PvnST/DX8KU2/IcNiYMANJjIDnjM012/0U+l+yLHWotVk3YDeijxwCst2Vor7bKi2DNmAi5RIOS5HqqKbTocuzOnU5nU1bY81PY/reqn1lU7khU9g/jegpHS1TXRptEH7aDT9oVXDHhU92tMLox0DqT2BgTUFE+2rg6YSxDaqSJ6UA5iMtK1PIg4bnev3/wCUKGbYv1hbKQr4eeHGJHgc1gRkp+9U+xNo2NjY2tm1qpNpighbSM0w5yg31yqOSUaktg69D9o2klv3B/M+VBdp6Wfst+Kr9rbI2KLVBiYESWGQx6yv7QqhtNl5gV1aAQSpkainhg4t39ipStopDtqVGPVTV7asWajjWkmXFG5/RwJ9P2WP+rRHbzRZN7VsP/dSqX6PcKi3JIH6rq0Fp86tbeYeiZs8INsxMGIa1VlM9YE1ySXYf1GVuFoFt7NoiHG7rrUPaLac7pAxDLhIPOcbj1e6skoItEyMY+s+6j6XhQgkrqNYByZ+PdXHlx3FHRy2NvtiRBQJjGS4+jiJyxYc47KK3LkzfDDte7CzJkkJYM8FlIIl3zyJ3UMa8ozIFdScYyDLORk5dlF7rtFyOi/gfKnjn8OPzRsUo8/pdDv+5hIIfaFsQ0AhLOySQDP3SaYf0eXAkG0tbe0IEc+0GkkxzVECSfGrbW9plzGM8AT5aVDe76bNQ1pzFJgF+aJgmJaM8j4Va81rUYV/Yj4Df1SH2fIrZS5+gLH9u0tG9xaKtHZGzkU4bnYd9mreYNCbDavpJ9GccRJTnROmnGqm0r5aKpZhgQEAs5CKCcgCWIApPzfInpR/ga8eC7l/JjNo3C7rtEKURLGULLmqhTZB2mCIE516BdtqWVoxRHDNgxwA3RyzmI9Yb99efPZemvWJWUIyAG0lWVfssBbXnQ4IjqopZ2qXcPaWVsj2mH0URCDNIfCrHLm6DQHqz9zBagr+xw5dydG2e0wgsdACT2ASayd/5Z2DKiobRQ5MvgSVGYmCxGsZEHKhlz21eULC1ezeztGcYpZiCZ6LZAZRAOkDJag2rsa6KqYbd+aCAHXJmJmDKiZzgAbszWvK1oyaoA38+ktGtC6HEZnLPr6Q8hSqzZ7Ps4GJJO/0ZOGerna8euaVRX4AyLCeuK7nkI+u2nlxxz91Mkk9fZxqhE9zu3pCQDEDty0rRm8MFw4N0Ti6o0iq/Iy2s1vKm2QOmQIzzEgGTOmeeu/Ktjy+/s6MFsUwsVDnevPOOOOjdlZTnUlGjWMdWYs4236CBqchkBTMD9X8P51butoFcM8YA6gxIOE6kHOT1RnW+2vs+4iy9NYThtV5hO7AWVhrlmDu9U51Msii6oaTZ5oUaRn7hRrbwmxsd3MXyFD7ULiEEESMx20Q26fsbIx6i/Ct49EMzrJ+038Rpypl0m/ib511qctAIQB+838TfOujF95vE12uigZwM33j9d1dxP8AfPu+VIU4UmMQL/ePgvyqRcf3vcv/ANaS023tsImpZVlhHcb/APKvypr39xpB7VEUPsb0zASd9PtXIEx8KngvaHyfphfZ9uzgs5kyRkIgADhRCcx9cazd12iEEa5k+6i9zveNVY5Tu6s4q0kuiW2whhqNxme7yrnpajtH1O4D4UAXtlv9tZ5+sfwNW9uhH12V5nyd2gr3lABAVjrqea4r0u6WgFcufs3xLQVubedC+XKBrrHB0PuYfGg22Nu2lhbIuJVsyyNJWSykstoszErzG/foptu1LXRsZ53NY9UuIXuBid8TXNHUkayVoofo6sQi25GWI2enUH+daTbTk2TASejlOoLCR7t4I4g1mOTFvhsbZl1knITmEyMdUzVay23bXo2tnZKhGNSrPkusgAakwBlrMmAKUr+I/wCwKKojtLsgbEiKuQEBN2pA3CTJyyzp92s0J6Cq2Z6I8Zjsoqux7QiCrHjCrrVJNkl5wITEYhAEEjQ8DW7qWuiOjpu4AMAdm7woW+piMicjv69/nRpbjeVB5hYHQSojjnOdDrTZN4DE+jmSTOJe7KaeLlGTvoJ1JaK6x92lUo2Vef8AlEd6n+qlXRyRlxZ5HhFdHGtOLnZhST6JcjpYux03EtrQhUh5xDIGIWR0ThhSMpMCciJnWtUznobcCVeYI7jRva989IS0zzVE+yqj4UODWbOcbOAEGDAgycIM2DsTGIGc98iOjXbW8gCFk9GchMiGjLd2d9Lim7KUtDb6eYPaHkaN3jaB/wCz7qgzazNoJ4Y7Vjr2RQC0t2fMgKBAyECBlPN0PbFOupEEGTMKpJwqNSRBG/Ls76mULa/DsakVktCCMzoI7YifdWn22fsLL2B5igFrdecInXOM+/ISPzojtO0lU569ALhxZQsGWy5pzPdHCtPRDBbU5Wgd9SJbqPUBz35mOuNKsAoVEgc7cCABnGeWmn50DKbPlIGXHtqwEZs4AnhkO4axUDjC6qOjM6z4x40WsXWB78PDKSc88s5qU7BMHW9iwGWcawDEHeDEbqkuV3Yk4ljSDPEwMuH51avbSImASRHDM6VZswQMPVETHDXq+QpJ2x+yMWIGUASMpzM5cZy1O7WmXqxBVlgzERkJJmNB7u/fU6POkA8Mx2R97TjPwcXyJC9eUkR198CN8Cqodla5WCqsAZjUZyTPO9/DdNWDZgiCATrx3awd07xVQ2hGg1Y6g9o16pqyzwM4Az1UZEgcdTAHGKlO+wsG7TKEhSTIJ0CjXXPflV644GUQ2/owAcjwBgfmBUV5swQxVVZ4EkHPdpJ39nhvoIlsSOYwgxOQ0iQc+yh2Lk0y/fGcHmWcjLnZTI17NKlsrFyjB0wseJIAHRnmmD3canXFAxCDpoDE6Lrpxy3ddJUJw554t3ZOsg8TPuJkUcfZRDsa4NYNjLKSDOIYso1ictJrSWvKB0QkMMcCFKnWfDPPsjroddtnWzdFCN/OUpOWWeXE58YJ0q9duTdoTLsiiNJJg8QAI9++onjUuyozpUgONvvbOi2q4lR0aMIHOVpzJ0B0I3jrrapygRhDIGBGYgwSepmkjXduqtdeStjIZ7VmMzCqiCZngTHZHlBy7bGuyiPRh/bYv7mkVjPDE0jNoytnfke1tFexU2eEBFXmtig70MzmerKiGzdm2uNsCWwsQVFmge0sygUAQcZAZchmTnw1rXWduiAKmBBuCIFA7hFdN7B3/XjSWFfYOYOu+y7WOdbOpxYpLgsM5IhVwEd3xp1y2ItkWKXq3UMxZlX0YBdtWzQ55dnvqxaXj6kVA95jMkAdcCrhgS6QpZLCatA6bN1vBPuArhvBGjL/AAfnWdvO2UTpOPrtoVb8rRoiFj1fPdWqgkZ8mzbf2lvvL/D/APqlXnv/AHkvH3V/i+QpU+IcjGj4UKXXuPkaVKrfZi/R06N+75Gu2v8AUfhXKVHoH0csdG9mrF09XtXyalSpjCV66H7p8/yHhQy9MdJyyy/dWlSoYP0cXd7Y8jT7rmyznn8RSpVLF9i2FGWX1nRICEJGRjXf41ylRHpFoH3vVe351eb+r4LSpVMfqYEzer9bzVcbu6lSrVCZFe9F9pqs2/QU78LZ7+hxpUqldsZImn7y+a1HOR6lEdWSUqVHsPRfuaAmCAROke38h4VqRZKvRUL2ADypUqa6FLssWNSuc6VKkxx6JEHNplnSpVCLZIrHLOmsx40qVUiWNt9D2GsltW2bCOcdeJrlKm+0KPTAVnm5nPtz30buaDGRAjhGWnCu0qH0Uuw5XaVKsyz/2Q=="
+                    alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="https://media.istockphoto.com/photos/renovation-of-studio-room-picture-id1146295665?k=20&m=1146295665&s=612x612&w=0&h=b9jaZef5NKQTWZTFSG-SdMQQkzc--7_JGnAa4lJkf94="
+                    alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="https://inhabitat.com/wp-content/blogs.dir/1/files/2015/09/IDIN-Architects-Thai-Building-Renovation-889x766.jpg"
+                    alt="Our Client">
+            </div>
+        </div>
+        <a href ="Services.html" target="_blank">
+        <button class="contactbtn">Features</button></a>
+    </section>
+    <hr>
+    <section id="contact">
+        <div id="contact-box">
+<br><br><br><br>
+            <h2 class="h-third center">We can help build your project!</h2><br>
+            <h4 class="h-third center">Tell us about your project</h4><br>
+        </div>
+       <a href="contactus.html" target="_blank"><center><button class="contactbtn">help</button></center></a>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.ChamundaEnterprise.com. All Rights Reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
