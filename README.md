@@ -13,6 +13,8 @@ The Construction Company Website includes the following features:
     About Us: This page provides information about the company's history, mission, and team.
     Services: This page provides details about the services provided by the company.
     Contact Us: This page provides a contact form for customers to get in touch with the company.
+    Style: This file consists all the css for the page.
+    img: This folder consists of all the images used in the website
 
 Usage
 
